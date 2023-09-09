@@ -2,6 +2,12 @@ namespace PierresBakery.Models
 {
   public class Pastry : BakedGood
   {
+    public int Total {get;}
+
+    public Pastry()
+    {
+      Total = 0;
+    }
     public override int CalculateTotal(int amount)
     {
       int pastryCost = 0;
