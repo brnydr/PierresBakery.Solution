@@ -1,7 +1,7 @@
 namespace PierresBakery.Models
 {
-  public abstract BakedGood
+  public abstract class BakedGood
   {
-    public abstract int CalculateTotal
+    
   }
 }
