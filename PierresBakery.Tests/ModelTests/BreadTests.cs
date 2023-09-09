@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
 
-namespace PierresBakery.TestTools
+namespace PierresBakery.Tests
 {
   [TestClass]
   public class BreadTests
@@ -27,6 +27,15 @@ namespace PierresBakery.TestTools
       Bread newBread = new Bread();
       int input = 2;
       int total = 10;
+      Assert.AreEqual(total, newBread.CalculateTotal(input));
+    }
+
+    [TestMethod]
+    public void CalculateTotal_ReturnsTotalWithDiscounts_Int()
+    {
+      Bread newBread = new Bread();
+      int input = 10;
+      int total = 35;
       Assert.AreEqual(total, newBread.CalculateTotal(input));
     }
   }
