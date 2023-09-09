@@ -2,7 +2,7 @@ namespace PierresBakery.Models
 {
   public class Pastry : BakedGood
   {
-    public int Total {get;}
+    public int Total {get; set;}
 
     public Pastry()
     {
@@ -10,7 +10,6 @@ namespace PierresBakery.Models
     }
     public override int CalculateTotal(int amount)
     {
-      int pastryCost = 0;
       for (int i = 1; i <= amount; i++)
       {
         if (i % 3 == 0)
@@ -19,10 +18,10 @@ namespace PierresBakery.Models
         }
         else
         {
-          pastryCost += 2;
+          this.Total += 2;
         }
       }
-      return pastryCost;
+      return this.Total;
     }
   }
 }
