@@ -13,11 +13,21 @@ namespace PierresBakery.TestTools
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
     [TestMethod]
-    public void CalculateTotal_ReturnsTotal_Int()
+    public void CalculateTotal_ReturnsNumber_Int()
     {
       Bread newBread = new Bread();
       int total = 5;
-      Assert.AreEqual(newBread.CalculateTotal(), total);
+      int amount = 1;
+      Assert.AreEqual(newBread.CalculateTotal(amount), total);
+    }
+
+    [TestMethod]
+    public void CalculateTotal_ReturnsTotalFromInput_Int()
+    {
+      Bread newBread = new Bread();
+      int input = 2;
+      int total = 10;
+      Assert.AreEqual(total, newBread.CalculateTotal(input));
     }
   }
 }
