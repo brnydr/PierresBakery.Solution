@@ -46,5 +46,14 @@ namespace PierresBakery.Tests
       int zero = 0;
       Assert.AreEqual(zero, newBread.Total);
     }
+
+    [TestMethod]
+    public void SetTotal_SetTotalProperty_Int()
+    {
+      Bread newBread = new Bread();
+      int input = 5;
+      newBread.Total = input;
+      Assert.AreEqual(input, newBread.Total);
+    }
   }
 }
