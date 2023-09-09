@@ -20,5 +20,14 @@ namespace PierresBakery.Tests
       int amount = 1;
       Assert.AreEqual(newPastry.CalculateTotal(amount), total);
     }
+
+    [TestMethod]
+    public void CalculateTotal_ReturnsTotalFromInput_Int()
+    {
+      Pastry newPastry = new Pastry();
+      int input = 2;
+      int total = 4;
+      Assert.AreEqual(total, newPastry.CalculateTotal(input));
+    }
   }
 }
